@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube</title>
+</head>
+<body>
+<h1>YouTube 2</h1>
+<ul>
+    <li th:each="video : ${list}">
+        <span th:text="${video}"></span>
+    </li>
+</ul>
+
+</body>
+</html>

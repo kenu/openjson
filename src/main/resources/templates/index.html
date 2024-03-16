@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<h1>Hello World!</h1>
+<code th:text="${message1}">text</code>
+<h2>K-Pop Band!</h2>
+<ul>
+    <li th:each="band : ${list}">1
+        <a th:href="@{'https://www.youtube.com/results?search_query='+${band}}" target="_blank" th:text="${band}"></a></li>
+</ul>
+</body>
+</html>
