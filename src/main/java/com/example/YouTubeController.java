@@ -7,6 +7,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class YouTubeController {
@@ -15,20 +16,9 @@ public class YouTubeController {
   private YouTubeService youTubeService;
 
   @GetMapping("/youtube")
-  public String youtube(Model model) {
-    // file exists, read the file and return the result
-    String activities = youTubeService.readFromFile();
-    if (!StringUtils.hasLength(activities)) {
-      activities = youTubeService.getFromApi();
-    }
-    model.addAttribute("message1", activities);
-    return "youtube";
-  }
-
-  @GetMapping("/youtube2")
   public String youtube2(Model model) {
-    List<String> list = JacksonExample.readJson2();
+    List<Map<String, String>> list = JacksonExample.readJson2();
     model.addAttribute("list", list);
-    return "youtube2";
+    return "youtube";
   }
 }

@@ -5,7 +5,12 @@
     <title>YouTube</title>
 </head>
 <body>
-<h1>YouTube</h1>
-<pre th:text="${message1}"></pre>
+<h1>YouTube 2</h1>
+<ul>
+    <li th:each="video : ${list}">
+        <span th:text="${video}"></span>
+    </li>
+</ul>
+
 </body>
 </html>
