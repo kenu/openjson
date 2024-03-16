@@ -8,7 +8,7 @@ import java.util.List;
 
 @Controller
 public class JsonController {
-  @GetMapping("/")
+  @GetMapping("/json")
   public String index(Model model) {
     model.addAttribute("message1", "Hello, World!");
     List<String> list = getList();

@@ -1,13 +1,17 @@
 package com.example;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JacksonExample {
   public static void main(String[] args) {
@@ -28,7 +32,6 @@ public class JacksonExample {
       JsonNode itemsNode = rootNode.get("items");
 
       // Iterate over the items array
-      AtomicInteger index = new AtomicInteger();
       List<Map<String, String>> list = new ArrayList<>();
       for (JsonNode item : itemsNode) {
         System.out.println(item);
